@@ -2,19 +2,19 @@ package junit;
 
 public class Calculator {
 
-	public int getPlus(int x, int y) {
+	public static int getPlus(int x, int y) {
 		return x + y;
 	}
 
-	public int getMinus(int x, int y) {
+	public static int getMinus(int x, int y) {
 		return x - y;
 	}
 
-	public int getMultiple(int x, int y) {
+	public static int getMultiple(int x, int y) {
 		return x * y;
 	}
 
-	public double getDivide(int x, int y) {
+	public static double getDivide(double x, double y) {
 		return x / y;
 	}
 

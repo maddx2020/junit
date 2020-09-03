@@ -1,15 +1,13 @@
 package junit;
 
+import org.junit.Assert;
 import org.junit.Test;
 
-import junit.framework.Assert;
-
-@SuppressWarnings("deprecation")
 public class First extends Assert {
 	@Test
-	public void testEquals() {
+	public void testEqualsPlus() {
 
-		assertEquals(4, 2+2);
+		assertEquals(5, Calculator.getPlus(2, 2));
 		
 	}
 
