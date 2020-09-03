@@ -9,6 +9,7 @@ public class Third extends Assert {
 	public void testEqualsDivide() {
 
 		assertEquals(2, Calculator.getDivide(10, 5), 0.1);
+
 	}
 
 }
