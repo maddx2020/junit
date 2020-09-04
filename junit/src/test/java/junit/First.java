@@ -3,7 +3,6 @@ package junit;
 import java.util.Arrays;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -12,7 +11,6 @@ import org.junit.runners.Parameterized;
 
 public class First extends Assert {
 
-	private Calculator calc;
 	private int x;
 	private int y;
 	private int result;
@@ -28,15 +26,11 @@ public class First extends Assert {
 		return Arrays.asList(new Object[][] { { -5, 3, -2 }, { 0, 15, 15 }, { 11, 8, 19 } });
 	}
 
-	@Before
-	public void init() {
-		calc = new Calculator();
-	}
 
 	@Test
 	public void testEqualsPlus() {
 
-		assertEquals(result, calc.getPlus(x, y));
+		assertEquals(result, Calculator.getPlus(x, y));
 
 	}
 

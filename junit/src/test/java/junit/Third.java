@@ -6,8 +6,14 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
 
-@RunWith(Parameterized.class)
+@RunWith({Parameterized.class, CalculatorRunner.class})
+//@RunWith(CalculatorRunner.class)
+//@SuiteClasses({CalculatorRunner.class, Parameterized.class})
+//@RunWith(Suite.class)
+
 public class Third extends Assert {
 
 	private int x;
@@ -27,9 +33,11 @@ public class Third extends Assert {
 	}
 
 	@Test
-	public void testEqualsDivide() {
+	public void checkEqualsDivide() {
 
 		assertEquals(result, Calculator.getDivide(x, y), 0.1);
+		
+//		assertEquals(5, Calculator.getDivide(50, 10), 0.1);
 
 	}
 

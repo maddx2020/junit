@@ -2,7 +2,7 @@ package junit;
 
 public class Calculator {
 
-	public  int getPlus(int x, int y) {
+	public static int getPlus(int x, int y) {
 		return x + y;
 	}
 
