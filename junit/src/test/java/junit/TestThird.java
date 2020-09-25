@@ -30,7 +30,7 @@ public class TestThird extends Assert {
 	@Test
 	public void testcheckEqualsDivide() {
 
-		assertEquals(result, Calculator.getDivide(x, y), 0.1);
+		assertEquals(result, new Calculator().getDivide(x, y), 0.1);
 
 	}
 

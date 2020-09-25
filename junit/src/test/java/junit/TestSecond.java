@@ -12,7 +12,7 @@ public class TestSecond extends Assert {
 
 	private int x;
 	private int y;
-	private int result;
+	private double result;
 
 	public TestSecond(int x, int y, int result) {
 		this.x = x;
@@ -28,7 +28,7 @@ public class TestSecond extends Assert {
 
 	@Test
 	public void testCheckMultiple() {
-		assertEquals(result, Calculator.getMultiple(x, y));
+		assertEquals(result, new Calculator().getMultiple(x, y));
 
 	}
 

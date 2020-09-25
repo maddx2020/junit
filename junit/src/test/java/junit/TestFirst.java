@@ -13,7 +13,7 @@ public class TestFirst extends Assert {
 
 	private int x;
 	private int y;
-	private int result;
+	private double result;
 
 	public TestFirst(int x, int y, int result) {
 		this.x = x;
