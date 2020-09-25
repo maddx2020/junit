@@ -8,29 +8,27 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
-
-public class Third extends Assert {
+public class TestSecond extends Assert {
 
 	private int x;
 	private int y;
-	private double result;
+	private int result;
 
-	public Third(int x, int y, double result) {
+	public TestSecond(int x, int y, int result) {
 		this.x = x;
 		this.y = y;
 		this.result = result;
 	}
 
-	@Parameterized.Parameters(name = "{0} / {1} = {2}")
+	@Parameterized.Parameters(name = " {0} * {1} = {2}")
 	public static Iterable<Object[]> elements() {
+		return Arrays.asList(new Object[][] { { -3, 2, -6 }, { 0, 34, 0 }, { 3, 7, 21 } });
 
-		return Arrays.asList(new Object[][] { { -15, -3, 5 }, { 0, 2, 0 }, { 40, 10, 4 } });
 	}
 
 	@Test
-	public void checkEqualsDivide() {
-
-		assertEquals(result, Calculator.getDivide(x, y), 0.1);
+	public void testCheckMultiple() {
+		assertEquals(result, Calculator.getMultiple(x, y));
 
 	}
 

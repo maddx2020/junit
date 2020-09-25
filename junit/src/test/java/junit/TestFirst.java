@@ -9,13 +9,13 @@ import org.junit.runners.Parameterized;
 
 @RunWith(Parameterized.class)
 
-public class First extends Assert {
+public class TestFirst extends Assert {
 
 	private int x;
 	private int y;
 	private int result;
 
-	public First(int x, int y, int result) {
+	public TestFirst(int x, int y, int result) {
 		this.x = x;
 		this.y = y;
 		this.result = result;
@@ -30,7 +30,7 @@ public class First extends Assert {
 	@Test
 	public void testEqualsPlus() {
 
-		assertEquals(result, Calculator.getPlus(x, y));
+		assertEquals(result, new Calculator().getPlus(x, y));
 
 	}
 
